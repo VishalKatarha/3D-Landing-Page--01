@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+
+/*--------------------- Gradient & Layer BG -------------------- */
+
+.image-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 999;
+    
+}
+
+.layer-blur{
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: 999;
+}
+
+
+/*-------------------------- Nabar ------------------------- */
+
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    margin-top: 1.1rem;
+    z-index: 999;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem; 
+    z-index: 999; 
+}
+
+nav a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+nav a:hover{
+    color: orange;
+    transform: scale(1.1);
+}
+
+.btn-signing{
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 550;
+    transition: 0.2s ease;
+    cursor: pointer;
+     z-index: 999;
+}
+
+
+.btn-signing:hover{
+    background-color: white;
+    color: orange;
+    box-shadow: 0 0 15px orange;
+}
+
+
+/*--------------------- Hero Section -------------------- */
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh-6rem);
+    margin-top: 10rem;
+}
+
+.content{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-box{
+    position: relative;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 50px;
+    background: linear-gradient(to right , #656565 , #a79442 , #d85001 , #a04d00, #757575, #656565 );
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px orange;
+}   
+
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+
+
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box .tag:hover{
+    color: orange;
+}
+
+.content h1{
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(250, 250, 250, 0.5);
+    text-transform: uppercase;
+}
+
+.description{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.btn-get-started{
+    text-decoration: none;
+    border: 1px solid rgba(255, 166, 0, 0.548);
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size:1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: orange;
+    transition: 0.3s ease;
+}
+
+.btn-get-started:hover{
+    
+    box-shadow: 0 0 15px orange
+}
+
+
+.btn-signing-main{
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    font-size:1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: orange;
+    transition: 0.2s ease;
+}
+
+.btn-signing-main:hover{
+    text-shadow: 0 0 5px orange,
+    0 0 10px orange,
+    0 0 15px orange;;
+}
+
+
+/*--------------------- 3D Spline -------------------- */
+
+.spline{
+    position: absolute;
+    top: 0;
+    right: -20%;
+    overflow: hidden;  
+}
+
+
+
+.spline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; /* apne hisab se */
+  background:
+  linear-gradient(to right, #000 0%, rgba(0,0,0,.9) 8%, rgba(0,0,0,.6) 15%, transparent 30%),
+   linear-gradient(
+    to bottom,
+    transparent 30%,
+    #000 100%
+  );
+  
+  pointer-events: none;
+}
+
+
+
+/*--------------------- Tablet Responsive -------------------- */
+
+@media (max-width:1300px){
+    header{
+        padding: 1rem 0.5rem;
+    }
+
+    .content{
+        margin-top: 40%;
+    }
+
+    .spline{
+        scale:.9;
+        top: -20%;
+       right: -5%;
+    
+    }
+    
+.spline::after {
+    background:
+  linear-gradient(to right, #000 0%, rgba(0,0,0,.5) 8%, rgba(0,0,0,.1) 25%, transparent 100%),
+   linear-gradient(
+    to bottom,
+    transparent 50%,
+    #000 100%
+  );
+}
+ 
+}
+
+
+@media(max-width:768px){
+
+header{
+    padding: 1rem 0.1rem;
+}
+
+
+nav{
+    display: none;
+}
+
+.btn-signing{
+    padding: 0.6rem 1.5rem;
+}
+
+.content{
+    margin-top: 20rem;
+}
+
+.spline{
+    scale: 0.9;
+    top: -25%;
+    right: -5%;
+}
+
+
+
+.content{
+    max-width: 30rem;
+    margin-left: 10%;
+}
+
+
+.tag-box{
+    width: 12rem;
+    margin-left: 5rem;
+    margin-top: -5rem;
+}
+
+.content h1{
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    text-align: center;
+    background-color: #000;
+    box-shadow: 0 0 50px 50px black;
+    
+}
+
+
+header img{
+    z-index: 9999;
+}
+
+.description{
+    text-align: center;
+}
+
+.buttons{
+    scale: .8;
+}
+
+
+}
