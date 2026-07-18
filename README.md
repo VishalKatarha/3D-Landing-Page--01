@@ -1,10 +1,4 @@
 
-<a href="https://www.youtube.com/watch?v=oskiEydAaok&list=PL67b5wgxuUtAWuQscGa6pnBD6SFv92W5W" target="_blank">
-  <img src="/thumbnail.png" alt="Thumbnail"/>
-</a>
-
-
----
 ## Description:
 ## Want to build a modern, interactive 3D website using HTML, CSS, and Spline? In this step-by-step tutorial, I'll show you how to integrate a 3D model into your website for a sleek, immersive experience! 🌐✨
 
@@ -21,10 +15,3 @@
 
 ## -HTML, CSS
 ## -Spline (3D Design & Animation)
-
-
----
-## Watch the full tutorial on YouTub
-<a href="https://www.youtube.com/watch?v=oskiEydAaok&list=PL67b5wgxuUtAWuQscGa6pnBD6SFv92W5W">
-  <img src="/youtube.png" alt="youtube"/>
-</a>
